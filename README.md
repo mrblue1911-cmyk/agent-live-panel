@@ -10,6 +10,8 @@ goes unseen.
 
 ![Agent Live Pane showing a tool call with full args, full result and token usage](docs/demo.gif)
 
+*The GIF is a demo GIF and is not of actual logic being run.*
+
 ## Install
 
 Hermes loads desktop plugins from `<HERMES_HOME>/desktop-plugins/`. Drop the
@@ -37,24 +39,6 @@ first install.
 | `? …` | `approval.request`, `clarify.request`, `secret.request` | yellow |
 | `✗ …` | `error` | red |
 | anything else | catch-all raw event dump | grey |
-
-## About the demo GIF
-
-The GIF is not a screen recording. It is a scripted event log replayed through
-the pane's own line logic in a headless browser, so it is deterministic and
-carries no data from the machine it was made on — no keys, no paths, no personal
-files can reach it, because nothing live is ever captured.
-
-```bash
-python docs/capture_gif.py     # needs playwright + ffmpeg
-```
-
-- `docs/demo.html` — the replay page. Edit `EVENTS` to change the story; open it
-  in a browser and call `renderAt(ms)` in the console to scrub.
-- `docs/capture_gif.py` — steps time at 10 fps, screenshots the pane at 2× device
-  pixels, encodes with a 48-colour palette.
-
-Demo content is illustrative, not a captured session.
 
 ## Safety
 
