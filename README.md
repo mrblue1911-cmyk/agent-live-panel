@@ -1,6 +1,11 @@
 # Agent Live Pane
 
-A Hermes desktop pane that shows the engine, not the chat.
+A Hermes desktop pane that runs alongside the app and shows you the engine: what
+the agent is actually doing in the background, in full.
+
+Driving with the hood up. You can see the engine running, and that matters for two
+reasons — you catch a credential the agent was about to print out, and you catch
+reasoning that is wrong or work it does not need to be doing, before it lands.
 
 Everything the chat surface hides, in a retro CRT log: reasoning deltas as they
 stream, every tool call with the **full arguments it received** and the **full
